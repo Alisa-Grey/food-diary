@@ -1,0 +1,400 @@
+/* Сброс стилей */
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter-Regular.woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter-Medium.woff');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter-SemiBold.woff');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter-Light.woff');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter-ExtraBold.woff');
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter-Black.woff');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Arial', sans-serif;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+p {
+  transition: color 0.2s ease-in-out;
+}
+
+p,
+li {
+  white-space: pre-line;
+  overflow-wrap: break-word;
+}
+
+#search-input:focus ~ div > svg > path {
+  fill: #363949;
+  transition: fill 0.2s ease;
+}
+
+.important-block {
+  z-index: 2;
+}
+
+.filter-button.is-active {
+  position: relative;
+}
+
+.filter-button.is-active::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #19c152;
+}
+
+a.link,
+button.link {
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+a.link:hover,
+button.link:hover {
+  color: #797c8b;
+  background-color: transparent;
+}
+
+#search-input.is-focused {
+  border-color: #19c152;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: #363949;
+}
+
+button.button-with-svg--danger > svg path {
+  transition: stroke 0.2s ease;
+}
+
+button.button-with-svg--danger:hover > svg path {
+  stroke: #f14c61;
+  fill: none;
+}
+
+div.animation {
+  position: absolute;
+  bottom: 100%;
+  animation: goUp 2s normal ease-in-out;
+}
+
+div.animation--fountain {
+  position: absolute;
+}
+
+div.animation--fountain.left {
+  left: 0;
+  bottom: 0;
+  transform: translate(0, 100%) scaleX(-1);
+  animation: goRight 2s normal ease-in-out;
+}
+
+div.animation--fountain.right {
+  right: 0;
+  bottom: 0;
+  transform: translate(0, 100%);
+  animation: goLeft 2s normal ease-in-out;
+}
+
+div.align-start {
+  justify-content: flex-start;
+}
+
+/* calendar */
+div.react-calendar {
+  font-family: Inter, sans-serif;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+}
+button.react-calendar__month-view__days__day.react-calendar__month-view__days__day--neighboringMonth {
+  color: white;
+  pointer-events: none;
+}
+button.react-calendar__tile.react-calendar__month-view__days__day--neighboringMonth.react-calendar__tile.warning::after,
+button.react-calendar__tile.react-calendar__month-view__days__day--neighboringMonth.react-calendar__tile.highlight::after {
+  background-color: #fff;
+}
+div.react-calendar__navigation {
+  width: 100%;
+  align-items: center;
+}
+.react-calendar__navigation__label__labelText {
+  color: #363949;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+div.react-calendar__month-view__weekdays__weekday {
+  color: #797c8b;
+}
+div.react-calendar__month-view__weekdays__weekday > abbr {
+  text-decoration: none;
+}
+
+button.react-calendar__month-view__days__day {
+  color: #363949;
+}
+button.react-calendar__month-view__days__day--weekend {
+  color: #c51616;
+}
+button.react-calendar__navigation__arrow.react-calendar__navigation__prev-button,
+button.react-calendar__navigation__arrow.react-calendar__navigation__next-button {
+  width: 44px;
+  height: 44px;
+}
+div.react-calendar__navigation button:disabled {
+  background-color: #fff;
+}
+
+button.react-calendar__tile:enabled:focus {
+  background-color: transparent;
+  outline: 1px solid #edfaf1;
+}
+
+button.react-calendar__tile:enabled:hover,
+div.react-calendar__navigation button:enabled:hover,
+div.react-calendar__navigation button:enabled:focus {
+  background-color: #edfaf1;
+}
+
+button.react-calendar__tile:disabled {
+  background: #eff3f7;
+}
+
+.react-calendar__navigation__arrow.react-calendar__navigation__next-button:disabled > svg > path,
+.react-calendar__navigation__arrow.react-calendar__navigation__prev-button:disabled > svg > path {
+  fill: #b1b3c0;
+}
+
+.react-calendar__tile,
+.react-calendar__navigation__arrow.react-calendar__navigation__next-button,
+.react-calendar__navigation__arrow.react-calendar__navigation__prev-button {
+  border-radius: 12px;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+/* hide year navigation buttons */
+.react-calendar__navigation__arrow.react-calendar__navigation__next2-button,
+.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button {
+  display: none;
+}
+.react-calendar__tile.react-calendar__tile--now {
+  background: transparent;
+}
+.react-calendar__tile.react-calendar__tile--active {
+  background: #fff;
+  border: 1px solid #19c152;
+}
+
+.react-calendar__tile.highlight,
+.react-calendar__tile.warning {
+  position: relative;
+}
+
+.react-calendar__tile.highlight::after,
+.react-calendar__tile.warning::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  border-radius: 32px;
+  transform: translateX(-50%);
+}
+.react-calendar__tile.highlight::after {
+  background-color: #19c152;
+}
+.react-calendar__tile.warning::after {
+  background-color: #f4b718;
+}
+.disabled,
+.disabled > div:hover p {
+  cursor: default;
+}
+
+.disabled > div:hover p {
+  color: #797c8b;
+}
+.disabled > div:hover svg > path {
+  fill: #797c8b;
+}
+
+div.select--error,
+input.error,
+input.error:not([value='']) {
+  border-color: #e8a731;
+}
+
+div.select--error > div {
+  background-color: #e8a731;
+}
+
+div.select--empty > div {
+  border-color: #fff;
+  background-color: #fff;
+  color: #797c8b;
+}
+
+div.clickable-box {
+  padding: 8px;
+  border: 1px solid #eff3f7;
+  border-radius: 8px;
+}
+
+.clickable-box.isActive {
+  background-color: #edfaf1;
+  border-color: #19c152;
+}
+
+.file-uploader {
+  cursor: pointer;
+}
+div.scrollable-block {
+  max-height: 70svh;
+  overflow-y: scroll;
+}
+
+div.filepond--image-preview-overlay-idle {
+  color: rgb(40 40 40 / 39%);
+}
+div.select--error,
+input.error,
+input.error:not([value='']) {
+  border-color: #e8a731;
+}
+
+div.select--error > div {
+  background-color: #e8a731;
+}
+
+div.clickable-box {
+  padding: 8px;
+  border: 1px solid #eff3f7;
+  border-radius: 8px;
+}
+
+.clickable-box.isActive {
+  background-color: #edfaf1;
+  border-color: #19c152;
+}
+
+div.word-break {
+  width: 75%;
+  overflow-wrap: break-word;
+}
+div.word-break > p,
+div.word-break > h1,
+div.word-break > h2,
+div.word-break > h3 {
+  word-break: break-word;
+  hyphens: auto;
+}
+div.multiline-container > p {
+  white-space: pre-line;
+}
+
+div.sticky-sibling {
+  min-height: calc(100vh - 90px);
+}
+
+@keyframes goUp {
+  0% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes goRight {
+  0% {
+    transform: scaleX(-1) translate(0, 100%);
+  }
+
+  100% {
+    transform: scaleX(-1) translate(-100%, -100%);
+  }
+}
+
+@keyframes goLeft {
+  0% {
+    transform: translate(0, 100%);
+  }
+
+  100% {
+    transform: translate(-100%, -100%);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  p.large-text {
+    font-size: 26px;
+  }
+  div.word-break {
+    width: 85%;
+  }
+}
